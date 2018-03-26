@@ -6,14 +6,19 @@ import store, { history } from './store';
 
 import './sass/main.scss';
 
+import routes from './routes';
+import PrivateRoute from './components/PrivateRoute';
+
 import Home from './containers/Home';
+import Login from './containers/Login';
 
 const App = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path={routes.login} component={Login} />
+          <PrivateRoute path={routes.home} component={Home} />
         </Switch>
       </div>
     </ConnectedRouter>
