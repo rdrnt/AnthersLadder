@@ -79,6 +79,7 @@ module.exports = {
         ],
         include: defaultInclude,
       },
+      { test: /\.node$/, loader: 'node-loader' },
     ],
   },
   target: 'electron-renderer',
@@ -117,6 +118,7 @@ module.exports = {
   devtool: 'cheap-source-map',
   devServer: {
     contentBase: OUTPUT_DIR,
+    historyApiFallback: true,
     stats: {
       colors: true,
       chunks: false,

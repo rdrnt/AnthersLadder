@@ -10,7 +10,7 @@
     "prod": "webpack --progress --config webpack.build.config.js && electron --noDevServer .",
     "build": "webpack --progress --config webpack.build.config.js",
     "package": "webpack --config webpack.build.config.js",
-    "postpackage": "electron-packager ./ --out=./builds"
+    "postpackage": "electron-packager ./ --out=./builds && ./node_modules/.bin/electron-rebuild"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -31,6 +31,7 @@
     "html-webpack-plugin": "^2.28.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
+    "node-loader": "^0.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-hot-loader": "^3.0.0-beta.6",
@@ -49,12 +50,15 @@
     "babel-eslint": "^8.2.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "client-oauth2": "^4.1.0",
+    "electron-rebuild": "^1.7.3",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-react": "^7.7.0",
+    "keytar": "^4.2.1",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.3",
     "prettier": "^1.11.1",
+    "react-form": "^3.4.4",
     "react-router": "^4.2.0",
     "react-router-redux": "^5.0.0-alpha.9",
     "redux-devtools-extension": "^2.13.2",

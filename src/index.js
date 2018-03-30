@@ -24,16 +24,17 @@ if (module.hot) {
 }
 */
 
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
-import App from "./App";
+import App from './App';
 
 const renderApp = () => {
-  let root = document.createElement("div");
-  root.id = "root";
+  let root = document.createElement('div');
+  root.id = 'root';
+  root.className = 'root';
   document.body.appendChild(root);
-  render(<App />, document.getElementById("root"));
+  render(<App />, document.getElementById('root'));
 };
 
 // This is needed for Hot Module Replacement

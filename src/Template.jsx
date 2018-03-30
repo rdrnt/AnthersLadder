@@ -6,7 +6,13 @@ class Template extends React.Component {
   }
 
   render() {
-    return <div>{this.props.children}</div>;
+    return (
+      <div>
+        <main role="main" id="main-content" tabIndex="-1">
+          {this.props.children}
+        </main>
+      </div>
+    );
   }
 }
 
