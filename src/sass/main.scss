@@ -1,3 +1,4 @@
-body {
-  background-color: purple;
-}
+@import 'normalizer';
+
+// base
+@import 'base/base';

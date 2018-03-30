@@ -9,18 +9,20 @@ import './sass/main.scss';
 import routes from './routes';
 import PrivateRoute from './components/PrivateRoute';
 
+import Template from './Template';
+
 import Home from './containers/Home';
 import Login from './containers/Login';
 
 const App = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
+      <Template>
         <Switch>
           <Route path={routes.login} component={Login} />
           <PrivateRoute path={routes.home} component={Home} />
         </Switch>
-      </div>
+      </Template>
     </ConnectedRouter>
   </Provider>
 );
