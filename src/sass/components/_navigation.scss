@@ -1,0 +1,14 @@
+.nav {
+  background-color: red;
+  width: 200px;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: purple;
+}

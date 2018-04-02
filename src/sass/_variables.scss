@@ -1,0 +1,24 @@
+/* =======================================================================
+Responsive
+========================================================================== */
+$screen-small: 600px;
+$screen-medium: 768px;
+$screen-large: 1024px;
+$screen-xlarge: 1200px;
+
+$breakpoints: (
+  'small': (min-width: $screen-small),
+  'medium': (min-width: $screen-medium),
+  'large': (min-width: $screen-large),
+  'xlarge': (min-width: $screen-xlarge)
+);
+
+/* =======================================================================
+Variables
+========================================================================== */
+
+// Fonts stacks
+$font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-size-base: 14px;
+$line-height-base: 1.5;

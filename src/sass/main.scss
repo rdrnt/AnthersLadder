@@ -1,10 +1,13 @@
 @import 'normalizer';
+@import 'mixins';
+@import 'variables';
+@import 'helpers';
 
 // containers
 @import 'containers/login';
 
-// mixins
-// @import 'mixins/mediaquery';
+// components
+@import 'components/navigation';
 
 // base
 @import 'base/base';
