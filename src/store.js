@@ -8,6 +8,9 @@ import rootReducer from './reducers';
 
 const defaultState = {
   user: {},
+  auth: {
+    isAuthenticated: false,
+  },
 };
 
 export const history = createBrowserHistory();

@@ -2,6 +2,9 @@ import React from 'react';
 
 import { Formik } from 'formik';
 
+import store, { history } from '../../store';
+import authActions from '../../actions/auth';
+
 const LoginForm = ({ onSubmit }) => (
   <div>
     <Formik
@@ -34,6 +37,8 @@ const LoginForm = ({ onSubmit }) => (
           .then(response => {
             // The account actually exists, so save the password
             if (response.status === 200) {
+              console.log('two chainz');
+              store.dispatch(authActions.setAuthStatus(true));
             } else {
               setErrors({
                 accessCode: 'not valid!',
