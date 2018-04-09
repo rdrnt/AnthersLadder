@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Navigation from './components/Navigation/Navigation';
 
@@ -19,4 +21,10 @@ class Template extends React.Component {
   }
 }
 
-export default Template;
+function mapStateToProps(state) {
+  return {
+    ...state,
+  };
+}
+
+export default withRouter(connect(mapStateToProps)(Template));

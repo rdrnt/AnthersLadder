@@ -13,8 +13,6 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
-
     this.formSubmit = this.formSubmit.bind(this);
   }
 
@@ -34,6 +32,11 @@ class Login extends React.Component {
         if (response.status === 200) {
           // Setting the auth status to true
           store.dispatch(authActions.setAuthStatus(true));
+
+          // Setting the access code to the API helper object...
+          // need to refactor this later, this is temporary
+          store.dispatch(authActions.setAccessCode(values.accessCode));
+
           // going home, since they dont need to login anymore
           this.props.history.push('/');
         } else {

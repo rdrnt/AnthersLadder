@@ -8,7 +8,8 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log('cripples', props);
+    const { dispatch } = props;
+    dispatch(userActions.fetchProfile());
   }
   componentDidMount() {}
   render() {

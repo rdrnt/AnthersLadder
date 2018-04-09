@@ -9,8 +9,6 @@ import store from '../../store';
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
-    console.log('nav props', props);
-    console.log('store', store.getState());
   }
 
   render() {

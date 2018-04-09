@@ -11,6 +11,12 @@ function auth(
         isAuthenticated: action.isAuthenticated,
       };
     }
+    case 'SET_ACCESS_CODE': {
+      return {
+        ...state,
+        accessCode: action.accessCode,
+      };
+    }
     default: {
       return state;
     }
