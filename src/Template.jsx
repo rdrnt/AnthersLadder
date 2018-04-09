@@ -11,14 +11,9 @@ class Template extends React.Component {
     return (
       <div className="base">
         <Navigation />
-        {/*
         <main role="main" id="main-content" tabIndex="-1">
           {this.props.children}
         </main>
-        */}
-        <div className="hoo">
-          <p>hello</p>
-        </div>
       </div>
     );
   }

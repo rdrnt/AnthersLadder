@@ -7,7 +7,9 @@ import { createBrowserHistory } from 'history';
 import rootReducer from './reducers';
 
 const defaultState = {
-  user: {},
+  user: {
+    profile: {},
+  },
   auth: {
     isAuthenticated: false,
   },
